@@ -27,8 +27,8 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('')
             ->login()
+            // ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::hex('#2e8e43'),
             ])
@@ -45,6 +45,10 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 AccountWidget::class,
             ])
+            ->unsavedChangesAlerts()
+            ->databaseTransactions()
+            ->spa()
+            ->databaseNotifications()
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
