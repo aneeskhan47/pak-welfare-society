@@ -78,9 +78,6 @@ class MainMembersRelationManager extends RelationManager
                 TextColumn::make('mobile_number')
                     ->label('Mobile number')
                     ->searchable(),
-                TextColumn::make('list_order')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
                 IconColumn::make('is_active')
                     ->label('Active')
                     ->boolean(),

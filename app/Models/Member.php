@@ -49,9 +49,7 @@ class Member extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection(self::PROFILE_PHOTO_COLLECTION)
-            ->useDisk('public')
-            ->singleFile();
+        $this->addMediaCollection(self::PROFILE_PHOTO_COLLECTION)->singleFile();
     }
 
     public function getProfilePhotoUrlAttribute(): ?string
